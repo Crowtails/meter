@@ -44,4 +44,5 @@
    use bug-report option inside crowtails
 
 # changes
+   Jun.09.2020: Network fixed.
    Jun.07.2020: added Release Candidate.
