@@ -44,11 +44,26 @@ Realtime and archive statistics for crowfall:
  * group user 
  * RAID, full Logtransmition and raidfight detection incl. full group log
  * archiv statisics module.
+ * Network / group/raid functions based on firebase simply add a realtime firebase to your crowtails to communicate 10gb for free as of today 11.06.2020.
  
 # how do i install, update, or uninstall it
    Enable Crowfalls log function, by logging in the game > click settings > last settings page "write combat log".
    Use installer.
- 
+   
+# How to get the server running?
+   1.) Log into > https://console.firebase.google.com/ (user your google account)
+   2.) Click database > realtime db > create testdb
+   3.) add:
+         {
+           "rules": {
+             ".read": true,
+             ".write": true,
+             ".indexOn": ["t"]
+           }
+          }
+       into rules.
+   4.) Set server to https://*this string*.firebaseio.com/ (server need to be only the db id)    
+       
  # how do i use it
    don't be a dick.
    On first run, settings will apear first. You need to fill in accoutname first.
