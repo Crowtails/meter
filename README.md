@@ -12,7 +12,7 @@
    If you are a guild leader, you should consider to create a firebase account with realtime db to share dps data.
    
 # Features
-Realtime and statistik archive:
+Realtime and archive statistics for crowfall:
  * Detail DMG/DMGin/Heal/Healin Skills->Target incl. crit and skill-tooltip
  * DMG type out
  * DMG type in
