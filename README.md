@@ -29,6 +29,9 @@
 # translations
    As of today only english / english client is supported. 
 
+# Sourcecode
+   Fast code, no documentation, no nice classes, no nice structure.
+
 # limitations
    dmg types
    group dmg/heal without server
