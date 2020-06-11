@@ -12,6 +12,34 @@
    If you are a guild leader, you should consider to create a firebase account with realtime db to share dps data.
    
 # Features
+Realtime and statistik archive:
+ * Detail DMG/DMGin/Heal/Healin Skills->Target incl. crit and skill-tooltip
+ * DMG type out
+ * DMG type in
+ * DMG out Graph
+ * Heal out Graph
+ * Heal in DMG in Graph
+ * Total DMG out
+ * Maxhit
+ * Total Heal out
+ * Max Heal
+ * DMG Hit Count
+ * Heal Hit count
+ * Total Heal in
+ * Total DMG in
+ * MostdangerEnemy
+ * Your Healer
+ * Your Target
+ * Dodges
+ * Fight-Timer
+ * DMG Crit Out 
+ * Heal Crit Out 
+ * DMG Crit In
+ * heal hit in 
+ * Heal Crit In 
+ * group user 
+ * RAID, full Logtransmition and raidfight detection incl. full group log
+ * archiv statisics module.
  
 # how do i install, update, or uninstall it
    Enable Crowfalls log function, by logging in the game > click settings > last settings page "write combat log".
