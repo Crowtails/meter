@@ -5,7 +5,7 @@
    MIT license.
    
 # About tos
-Pann - Director of Community - ArtCraft Developer: "He is reading the combat log. (So if we change the combat logs that we output it might break his overlay.) But from his description it doesn't sound like it is giving the players tactical advantages or anything."
+Pann - Director of Community - ArtCraft Developer on an other tool: "He is reading the combat log. (So if we change the combat logs that we output it might break his overlay.) But from his description it doesn't sound like it is giving the players tactical advantages or anything."
 https://community.crowfall.com/topic/25826-crowfall-parser-with-in-game-overlay/?do=findComment&comment=439714
 
 # how does it work
