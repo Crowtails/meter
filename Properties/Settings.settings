@@ -1,0 +1,159 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Crowtails.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NumbersIn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NumbersOut" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Details" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Fights" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Enemys" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DPSoutGraph" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DPSinGraph" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HPSoutGraph" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SettingsWindow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DPSoutSkills" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RaidDPSout" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RaidHPSout" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NumbersInSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="NumbersOutSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="DetailsSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="FightsSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="EnemysSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="DPSoutGraphSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="DPSinGraphSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="HPSoutGraphSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="SettingsWindowSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="DPSoutSkillsSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="RaidDPSoutSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="RaidHPSoutSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="Opacity_" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FightDura_" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="ApiKey_" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FightButton_" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Lock_" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Account_" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Online_" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowOnlyInFight" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ChanPWD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234</Value>
+    </Setting>
+    <Setting Name="DockWindow" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OverlayDis_" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="StartCrowfall" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CrowfallFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="NetworkOptions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="tut" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Class_" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DPSInOutType" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DPSInOutTypeSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="ExtendedNetwork" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="playerraidtoolSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="SettingsButtonSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="uilang" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="gameLang" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ArchivRaid" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ArchivRaidSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="SettingsButtonSetArchiv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="ServerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
