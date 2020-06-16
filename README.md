@@ -1,6 +1,6 @@
 [Screenshots and installation/user -guide](https://github.com/Crowtails/meter/wiki)
 
-# Crowtails: Crowfall dps meter
+# Crowtails: [Crowfall](https://crowfall.com/en-US/) dps meter
    WARNING: THERE IS NO HELP OR WARRANTY. THIS IS ENTIRELY AT YOUR OWN RISK AND YOU ASSUME ALL RESPONSIBILITY
    FOR USING THIS TOOL. IF YOU FEEL THIS PROVIDES GAMEPLAY ADVANTAGE OR AUTOMATION OR BREAKS ANY OTHER
    RULES DO NOT USE THIS.
@@ -13,7 +13,7 @@ https://community.crowfall.com/topic/25826-crowfall-parser-with-in-game-overlay/
 Jack Kirby (Crowfall) - Jun 11, 2020, 12:06:08 PM GMT-5 : So long as the tool is only reading our logs, it should be perfectly fine as far as the ToS goes! Let us know if you need anything else.
 
 # how does it work
-   Crowtails reads Crowfalls official log-files. All data collected is saved into a local database.
+   Crowtails reads [Crowfall](https://crowfall.com/en-US/) official log-files. All data collected is saved into a local database.
    If you join a group, those log-file-data will be transmittet to firebase by google and all group 
    members.
    The application does not send usage/user statistics of any kind.
