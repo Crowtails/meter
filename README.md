@@ -18,4 +18,7 @@ Jack Kirby (Crowfall) - Jun 11, 2020, 12:06:08 PM GMT-5 : So long as the tool is
    members.
    The application does not send usage/user statistics of any kind.
    If you are a guild leader, you should consider to create a firebase account with realtime db to share dps data.
-   
+
+[Screenshots and installation/user -guide](https://github.com/Crowtails/meter/wiki)
+
+![](https://cdn.discordapp.com/attachments/699668994336096297/723252112171073678/dpstool.PNG)
