@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Crowtails"
-#define MyAppVersion "1.0.0.0"
+#define MyAppVersion "1.2.0.0"
 #define MyAppPublisher "Crowtails"
 #define MyAppExeName "Crowtails.exe"
 
@@ -18,8 +18,8 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
-OutputDir=C:\Users\eimhac\Desktop
-OutputBaseFilename=crowtails_setup
+OutputDir=bin\
+OutputBaseFilename=crowtails_setup_1_2_0_0
 LicenseFile=license.txt
 Compression=lzma
 SolidCompression=yes

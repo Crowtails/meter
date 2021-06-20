@@ -90,7 +90,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Account_" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">ExampleUser</Value>
     </Setting>
     <Setting Name="Online_" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -154,6 +154,24 @@
     </Setting>
     <Setting Name="ServerUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Buffs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Debuffs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="BuffsSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="DebuffsSet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
+    </Setting>
+    <Setting Name="Enemy" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EnemySet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;0;0;0;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

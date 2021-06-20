@@ -29,30 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_LiveParse = new System.Windows.Forms.Button();
             this.btn_OldParse = new System.Windows.Forms.Button();
             this.bgw_live = new System.ComponentModel.BackgroundWorker();
@@ -147,6 +155,8 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btnSimFight = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.mergeFights = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ComboBox();
@@ -165,12 +175,13 @@
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.Opacity_ = new System.Windows.Forms.ComboBox();
             this.SettingsWindow = new System.Windows.Forms.Panel();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ComboBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.ApiKey_ = new System.Windows.Forms.ComboBox();
             this.btnStartRaidFight = new System.Windows.Forms.Button();
             this.gameLang = new System.Windows.Forms.ComboBox();
@@ -187,7 +198,6 @@
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.label35 = new System.Windows.Forms.Label();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -255,9 +265,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.bgwParseOld = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel26 = new System.Windows.Forms.Panel();
             this.pnlttut = new System.Windows.Forms.Panel();
@@ -282,6 +289,46 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.bgPost = new System.ComponentModel.BackgroundWorker();
             this.bgGet = new System.ComponentModel.BackgroundWorker();
+            this.Enemy = new System.Windows.Forms.Panel();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.Buffs = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Debuffs = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.button14 = new System.Windows.Forms.Button();
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.button9 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.panel21.SuspendLayout();
             this.HPSoutGraph.SuspendLayout();
@@ -302,7 +349,6 @@
             this.panel11.SuspendLayout();
             this.DPSinGraph.SuspendLayout();
             this.SettingsWindow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -321,8 +367,6 @@
             this.thisOnlinePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDPSOut)).BeginInit();
             this.panel30.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel26.SuspendLayout();
             this.pnlttut.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -331,6 +375,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.button2)).BeginInit();
             this.panel38.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnArchiv)).BeginInit();
+            this.Enemy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.Buffs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel23.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.Debuffs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel40.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel43.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_LiveParse
@@ -355,7 +412,7 @@
             this.btn_OldParse.ForeColor = System.Drawing.Color.White;
             this.btn_OldParse.Location = new System.Drawing.Point(86, 0);
             this.btn_OldParse.Name = "btn_OldParse";
-            this.btn_OldParse.Size = new System.Drawing.Size(123, 27);
+            this.btn_OldParse.Size = new System.Drawing.Size(94, 27);
             this.btn_OldParse.TabIndex = 1;
             this.btn_OldParse.Text = "parse old Logfile";
             this.btn_OldParse.UseVisualStyleBackColor = false;
@@ -396,9 +453,9 @@
             // panel22
             // 
             this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel22.Location = new System.Drawing.Point(0, 78);
+            this.panel22.Location = new System.Drawing.Point(0, 201);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(100, 22);
+            this.panel22.Size = new System.Drawing.Size(415, 22);
             this.panel22.TabIndex = 1;
             this.panel22.Tag = "1";
             this.panel22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -425,41 +482,40 @@
             // chart4
             // 
             this.chart4.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Area3DStyle.IsRightAngleAxes = false;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelAutoFitMaxFontSize = 8;
-            chartArea1.AxisX.LabelStyle.Enabled = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LabelStyle.TruncatedLabels = true;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelAutoFitMaxFontSize = 8;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.BorderWidth = 0;
-            chartArea1.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea1);
-            this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart4.Location = new System.Drawing.Point(0, 25);
+            chartArea11.Area3DStyle.IsRightAngleAxes = false;
+            chartArea11.AxisX.IsLabelAutoFit = false;
+            chartArea11.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea11.AxisX.LabelStyle.Enabled = false;
+            chartArea11.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea11.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea11.AxisX.LabelStyle.TruncatedLabels = true;
+            chartArea11.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea11.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea11.AxisY.IsLabelAutoFit = false;
+            chartArea11.AxisY.LabelAutoFitMaxFontSize = 8;
+            chartArea11.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea11.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea11.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea11.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea11.BackColor = System.Drawing.Color.Transparent;
+            chartArea11.BorderColor = System.Drawing.Color.Transparent;
+            chartArea11.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea11.BorderWidth = 0;
+            chartArea11.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea11);
+            this.chart4.Location = new System.Drawing.Point(82, 89);
             this.chart4.Margin = new System.Windows.Forms.Padding(2);
             this.chart4.Name = "chart4";
-            series1.BorderWidth = 4;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            series1.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsVisibleInLegend = false;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart4.Series.Add(series1);
+            series13.BorderWidth = 4;
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            series13.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series13.IsVisibleInLegend = false;
+            series13.LabelForeColor = System.Drawing.Color.White;
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            this.chart4.Series.Add(series13);
             this.chart4.Size = new System.Drawing.Size(100, 53);
             this.chart4.TabIndex = 23;
             this.chart4.Text = "chart4";
@@ -473,7 +529,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(0, 0);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(100, 25);
+            this.panel21.Size = new System.Drawing.Size(415, 25);
             this.panel21.TabIndex = 2;
             this.panel21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel21.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
@@ -486,7 +542,7 @@
             this.time2.Dock = System.Windows.Forms.DockStyle.Right;
             this.time2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time2.ForeColor = System.Drawing.Color.White;
-            this.time2.Location = new System.Drawing.Point(59, 0);
+            this.time2.Location = new System.Drawing.Point(374, 0);
             this.time2.Name = "time2";
             this.time2.Padding = new System.Windows.Forms.Padding(5);
             this.time2.Size = new System.Drawing.Size(41, 23);
@@ -517,10 +573,10 @@
             this.HPSoutGraph.Controls.Add(this.chart4);
             this.HPSoutGraph.Controls.Add(this.panel21);
             this.HPSoutGraph.Controls.Add(this.panel22);
-            this.HPSoutGraph.Location = new System.Drawing.Point(52, 377);
+            this.HPSoutGraph.Location = new System.Drawing.Point(737, 839);
             this.HPSoutGraph.MinimumSize = new System.Drawing.Size(100, 100);
             this.HPSoutGraph.Name = "HPSoutGraph";
-            this.HPSoutGraph.Size = new System.Drawing.Size(100, 100);
+            this.HPSoutGraph.Size = new System.Drawing.Size(415, 223);
             this.HPSoutGraph.TabIndex = 23;
             // 
             // label23
@@ -602,9 +658,9 @@
             // panel19
             // 
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel19.Location = new System.Drawing.Point(0, 922);
+            this.panel19.Location = new System.Drawing.Point(260, 922);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(918, 22);
+            this.panel19.Size = new System.Drawing.Size(451, 22);
             this.panel19.TabIndex = 1;
             this.panel19.Tag = "";
             this.panel19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -615,12 +671,12 @@
             // Fights
             // 
             this.Fights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Fights.Controls.Add(this.panel19);
             this.Fights.Controls.Add(this.dgFights);
             this.Fights.Controls.Add(this.panel39);
             this.Fights.Controls.Add(this.panel17);
             this.Fights.Controls.Add(this.panel14);
             this.Fights.Controls.Add(this.panel18);
-            this.Fights.Controls.Add(this.panel19);
             this.Fights.Location = new System.Drawing.Point(786, 12);
             this.Fights.MinimumSize = new System.Drawing.Size(100, 100);
             this.Fights.Name = "Fights";
@@ -633,21 +689,21 @@
             this.dgFights.AllowUserToDeleteRows = false;
             this.dgFights.AllowUserToResizeColumns = false;
             this.dgFights.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgFights.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgFights.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.dgFights.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgFights.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgFights.BackgroundColor = System.Drawing.Color.Black;
             this.dgFights.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgFights.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgFights.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgFights.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dgFights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgFights.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_sec,
@@ -663,12 +719,12 @@
             this.dgFights.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgFights.RowHeadersVisible = false;
             this.dgFights.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgFights.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgFights.RowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dgFights.RowTemplate.Height = 28;
             this.dgFights.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgFights.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgFights.Size = new System.Drawing.Size(451, 870);
+            this.dgFights.Size = new System.Drawing.Size(451, 892);
             this.dgFights.TabIndex = 16;
             this.dgFights.SelectionChanged += new System.EventHandler(this.dgFights_SelectionChanged);
             // 
@@ -756,7 +812,7 @@
             this.panel39.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel39.Location = new System.Drawing.Point(0, 52);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(260, 870);
+            this.panel39.Size = new System.Drawing.Size(260, 892);
             this.panel39.TabIndex = 19;
             // 
             // label12
@@ -1531,9 +1587,9 @@
             this.label15.Location = new System.Drawing.Point(24, 213);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 13);
+            this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 128;
-            this.label15.Text = "Most danger Enemy";
+            this.label15.Text = "Top Enemy";
             // 
             // panel17
             // 
@@ -1544,7 +1600,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel17.Location = new System.Drawing.Point(711, 52);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(207, 870);
+            this.panel17.Size = new System.Drawing.Size(207, 892);
             this.panel17.TabIndex = 18;
             this.panel17.Tag = "";
             // 
@@ -1623,6 +1679,8 @@
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.btnSimFight);
+            this.panel14.Controls.Add(this.button13);
             this.panel14.Controls.Add(this.mergeFights);
             this.panel14.Controls.Add(this.label44);
             this.panel14.Controls.Add(this.listBox2);
@@ -1636,15 +1694,43 @@
             this.panel14.TabIndex = 17;
             this.panel14.Tag = "";
             // 
+            // btnSimFight
+            // 
+            this.btnSimFight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSimFight.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSimFight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimFight.ForeColor = System.Drawing.Color.White;
+            this.btnSimFight.Location = new System.Drawing.Point(400, 0);
+            this.btnSimFight.Name = "btnSimFight";
+            this.btnSimFight.Size = new System.Drawing.Size(80, 27);
+            this.btnSimFight.TabIndex = 95;
+            this.btnSimFight.Text = "Sim Fight";
+            this.btnSimFight.UseVisualStyleBackColor = false;
+            this.btnSimFight.Click += new System.EventHandler(this.btnSimFight_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(338, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(62, 27);
+            this.button13.TabIndex = 94;
+            this.button13.Text = "Share";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // mergeFights
             // 
             this.mergeFights.Dock = System.Windows.Forms.DockStyle.Left;
             this.mergeFights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mergeFights.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mergeFights.ForeColor = System.Drawing.Color.White;
-            this.mergeFights.Location = new System.Drawing.Point(332, 0);
+            this.mergeFights.Location = new System.Drawing.Point(247, 0);
             this.mergeFights.Name = "mergeFights";
-            this.mergeFights.Size = new System.Drawing.Size(134, 27);
+            this.mergeFights.Size = new System.Drawing.Size(91, 27);
             this.mergeFights.TabIndex = 93;
             this.mergeFights.Text = "merge fights";
             this.mergeFights.UseVisualStyleBackColor = true;
@@ -1679,9 +1765,9 @@
             this.btnExportCsv.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnExportCsv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportCsv.ForeColor = System.Drawing.Color.White;
-            this.btnExportCsv.Location = new System.Drawing.Point(209, 0);
+            this.btnExportCsv.Location = new System.Drawing.Point(180, 0);
             this.btnExportCsv.Name = "btnExportCsv";
-            this.btnExportCsv.Size = new System.Drawing.Size(123, 27);
+            this.btnExportCsv.Size = new System.Drawing.Size(67, 27);
             this.btnExportCsv.TabIndex = 4;
             this.btnExportCsv.Text = "export csv";
             this.btnExportCsv.UseVisualStyleBackColor = false;
@@ -1752,45 +1838,45 @@
             // chart2
             // 
             this.chart2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelAutoFitMaxFontSize = 8;
-            chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.LabelStyle.TruncatedLabels = true;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.IsLabelAutoFit = false;
-            chartArea2.AxisY.LabelAutoFitMaxFontSize = 8;
-            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.BorderWidth = 0;
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            chartArea12.AxisX.IsLabelAutoFit = false;
+            chartArea12.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea12.AxisX.LabelStyle.Enabled = false;
+            chartArea12.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea12.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea12.AxisX.LabelStyle.TruncatedLabels = true;
+            chartArea12.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea12.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea12.AxisY.IsLabelAutoFit = false;
+            chartArea12.AxisY.LabelAutoFitMaxFontSize = 8;
+            chartArea12.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea12.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea12.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea12.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea12.BackColor = System.Drawing.Color.Transparent;
+            chartArea12.BorderColor = System.Drawing.Color.Transparent;
+            chartArea12.BorderWidth = 0;
+            chartArea12.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea12);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart2.Location = new System.Drawing.Point(0, 25);
             this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
-            series2.BorderWidth = 4;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Color = System.Drawing.Color.OrangeRed;
-            series2.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.IsVisibleInLegend = false;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series3.BorderWidth = 4;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Color = System.Drawing.Color.Green;
-            series3.Name = "Series2";
-            this.chart2.Series.Add(series2);
-            this.chart2.Series.Add(series3);
+            series14.BorderWidth = 4;
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series14.Color = System.Drawing.Color.OrangeRed;
+            series14.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series14.IsVisibleInLegend = false;
+            series14.LabelForeColor = System.Drawing.Color.White;
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            series15.BorderWidth = 4;
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series15.Color = System.Drawing.Color.Green;
+            series15.Name = "Series2";
+            this.chart2.Series.Add(series14);
+            this.chart2.Series.Add(series15);
             this.chart2.Size = new System.Drawing.Size(100, 53);
             this.chart2.TabIndex = 23;
             this.chart2.Text = "chart2";
@@ -1876,7 +1962,7 @@
             this.DPSinGraph.Controls.Add(this.chart2);
             this.DPSinGraph.Controls.Add(this.panel11);
             this.DPSinGraph.Controls.Add(this.panel12);
-            this.DPSinGraph.Location = new System.Drawing.Point(261, 377);
+            this.DPSinGraph.Location = new System.Drawing.Point(299, 439);
             this.DPSinGraph.MinimumSize = new System.Drawing.Size(100, 100);
             this.DPSinGraph.Name = "DPSinGraph";
             this.DPSinGraph.Size = new System.Drawing.Size(100, 100);
@@ -1918,12 +2004,15 @@
             // SettingsWindow
             // 
             this.SettingsWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SettingsWindow.Controls.Add(this.button15);
+            this.SettingsWindow.Controls.Add(this.button9);
+            this.SettingsWindow.Controls.Add(this.checkBox14);
+            this.SettingsWindow.Controls.Add(this.checkBox2);
+            this.SettingsWindow.Controls.Add(this.checkBox1);
             this.SettingsWindow.Controls.Add(this.label31);
             this.SettingsWindow.Controls.Add(this.label20);
             this.SettingsWindow.Controls.Add(this.textBox2);
-            this.SettingsWindow.Controls.Add(this.label17);
             this.SettingsWindow.Controls.Add(this.listBox3);
-            this.SettingsWindow.Controls.Add(this.button9);
             this.SettingsWindow.Controls.Add(this.ApiKey_);
             this.SettingsWindow.Controls.Add(this.btnStartRaidFight);
             this.SettingsWindow.Controls.Add(this.gameLang);
@@ -1940,7 +2029,6 @@
             this.SettingsWindow.Controls.Add(this.checkBox16);
             this.SettingsWindow.Controls.Add(this.checkBox9);
             this.SettingsWindow.Controls.Add(this.label38);
-            this.SettingsWindow.Controls.Add(this.pictureBox5);
             this.SettingsWindow.Controls.Add(this.checkBox15);
             this.SettingsWindow.Controls.Add(this.label35);
             this.SettingsWindow.Controls.Add(this.checkBox11);
@@ -1966,8 +2054,56 @@
             this.SettingsWindow.Location = new System.Drawing.Point(52, 13);
             this.SettingsWindow.MinimumSize = new System.Drawing.Size(100, 100);
             this.SettingsWindow.Name = "SettingsWindow";
-            this.SettingsWindow.Size = new System.Drawing.Size(717, 357);
+            this.SettingsWindow.Size = new System.Drawing.Size(537, 398);
             this.SettingsWindow.TabIndex = 25;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.BackColor = System.Drawing.Color.Black;
+            this.checkBox14.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox14.ForeColor = System.Drawing.Color.White;
+            this.checkBox14.Location = new System.Drawing.Point(25, 236);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(62, 17);
+            this.checkBox14.TabIndex = 106;
+            this.checkBox14.Tag = "Enemy";
+            this.checkBox14.Text = "Enemys";
+            this.checkBox14.UseVisualStyleBackColor = false;
+            this.checkBox14.Visible = false;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.Color.Black;
+            this.checkBox2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.ForeColor = System.Drawing.Color.White;
+            this.checkBox2.Location = new System.Drawing.Point(25, 219);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(68, 17);
+            this.checkBox2.TabIndex = 105;
+            this.checkBox2.Tag = "Debuffs";
+            this.checkBox2.Text = "Debuffs";
+            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox2.Visible = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Black;
+            this.checkBox1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(25, 202);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 17);
+            this.checkBox1.TabIndex = 104;
+            this.checkBox1.Tag = "Buffs";
+            this.checkBox1.Text = "Buffs";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.Visible = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label31
             // 
@@ -1994,6 +2130,7 @@
             this.label20.Size = new System.Drawing.Size(53, 23);
             this.label20.TabIndex = 101;
             this.label20.Text = "Gruppe";
+            this.label20.Visible = false;
             // 
             // textBox2
             // 
@@ -2002,19 +2139,6 @@
             this.textBox2.Size = new System.Drawing.Size(172, 20);
             this.textBox2.TabIndex = 102;
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(551, 153);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(133, 13);
-            this.label17.TabIndex = 100;
-            this.label17.Text = "LF Guild? click logo!";
             // 
             // listBox3
             // 
@@ -2032,19 +2156,6 @@
             this.listBox3.TabIndex = 37;
             this.listBox3.Visible = false;
             // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(532, 283);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(175, 24);
-            this.button9.TabIndex = 99;
-            this.button9.Text = "Feedback/Bugs";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // ApiKey_
             // 
             this.ApiKey_.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2057,6 +2168,7 @@
             this.ApiKey_.Name = "ApiKey_";
             this.ApiKey_.Size = new System.Drawing.Size(172, 21);
             this.ApiKey_.TabIndex = 36;
+            this.ApiKey_.Visible = false;
             this.ApiKey_.SelectedIndexChanged += new System.EventHandler(this.ApiKey__SelectedIndexChanged);
             this.ApiKey_.Click += new System.EventHandler(this.ApiKey__Click);
             // 
@@ -2065,7 +2177,7 @@
             this.btnStartRaidFight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnStartRaidFight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartRaidFight.ForeColor = System.Drawing.Color.White;
-            this.btnStartRaidFight.Location = new System.Drawing.Point(289, 369);
+            this.btnStartRaidFight.Location = new System.Drawing.Point(294, 359);
             this.btnStartRaidFight.Name = "btnStartRaidFight";
             this.btnStartRaidFight.Size = new System.Drawing.Size(35, 28);
             this.btnStartRaidFight.TabIndex = 1;
@@ -2087,6 +2199,7 @@
             this.gameLang.Name = "gameLang";
             this.gameLang.Size = new System.Drawing.Size(63, 21);
             this.gameLang.TabIndex = 97;
+            this.gameLang.Visible = false;
             this.gameLang.SelectedIndexChanged += new System.EventHandler(this.gameLang_SelectedIndexChanged);
             // 
             // uiLang
@@ -2104,6 +2217,7 @@
             this.uiLang.Name = "uiLang";
             this.uiLang.Size = new System.Drawing.Size(64, 21);
             this.uiLang.TabIndex = 96;
+            this.uiLang.Visible = false;
             this.uiLang.SelectedIndexChanged += new System.EventHandler(this.uiLang_SelectedIndexChanged);
             // 
             // label49
@@ -2118,6 +2232,7 @@
             this.label49.Size = new System.Drawing.Size(179, 23);
             this.label49.TabIndex = 95;
             this.label49.Text = "Lang. UI               Game";
+            this.label49.Visible = false;
             // 
             // label32
             // 
@@ -2146,12 +2261,12 @@
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.White;
-            this.label48.Location = new System.Drawing.Point(570, 253);
+            this.label48.Location = new System.Drawing.Point(213, 372);
             this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(103, 13);
             this.label48.TabIndex = 93;
-            this.label48.Text = "Version: 1.0.0.0";
+            this.label48.Text = "Version: 1.2.0.0";
             // 
             // cbClass
             // 
@@ -2270,22 +2385,12 @@
             this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(560, 233);
+            this.label38.Location = new System.Drawing.Point(209, 357);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(115, 13);
             this.label38.TabIndex = 81;
             this.label38.Text = "Software by Schnee";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(532, 41);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(175, 101);
-            this.pictureBox5.TabIndex = 49;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // checkBox15
             // 
@@ -2349,11 +2454,11 @@
             // 
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(532, 317);
+            this.btn_close.Location = new System.Drawing.Point(15, 357);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(175, 26);
+            this.btn_close.Size = new System.Drawing.Size(96, 26);
             this.btn_close.TabIndex = 24;
-            this.btn_close.Text = "Close Parser";
+            this.btn_close.Text = "Exit Crowtails";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
@@ -2421,7 +2526,7 @@
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(717, 25);
+            this.panel27.Size = new System.Drawing.Size(537, 25);
             this.panel27.TabIndex = 2;
             this.panel27.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel27.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -2448,7 +2553,7 @@
             this.button7.Dock = System.Windows.Forms.DockStyle.Right;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(685, 0);
+            this.button7.Location = new System.Drawing.Point(505, 0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(32, 25);
             this.button7.TabIndex = 94;
@@ -2531,9 +2636,9 @@
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 78);
+            this.panel13.Location = new System.Drawing.Point(0, 128);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(100, 22);
+            this.panel13.Size = new System.Drawing.Size(319, 22);
             this.panel13.TabIndex = 1;
             this.panel13.Tag = "1";
             this.panel13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -2607,7 +2712,7 @@
             this.DPSoutGraph.Controls.Add(this.chart1);
             this.DPSoutGraph.Controls.Add(this.panel8);
             this.DPSoutGraph.Controls.Add(this.panel9);
-            this.DPSoutGraph.Location = new System.Drawing.Point(157, 377);
+            this.DPSoutGraph.Location = new System.Drawing.Point(195, 439);
             this.DPSoutGraph.MinimumSize = new System.Drawing.Size(100, 100);
             this.DPSoutGraph.Name = "DPSoutGraph";
             this.DPSoutGraph.Size = new System.Drawing.Size(100, 100);
@@ -2616,38 +2721,38 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisX.IsLabelAutoFit = false;
-            chartArea3.AxisX.LabelAutoFitMaxFontSize = 8;
-            chartArea3.AxisX.LabelStyle.Enabled = false;
-            chartArea3.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX.LabelStyle.TruncatedLabels = true;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.IsLabelAutoFit = false;
-            chartArea3.AxisY.LabelAutoFitMaxFontSize = 8;
-            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.BorderWidth = 0;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea13.AxisX.IsLabelAutoFit = false;
+            chartArea13.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea13.AxisX.LabelStyle.Enabled = false;
+            chartArea13.AxisX.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea13.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea13.AxisX.LabelStyle.TruncatedLabels = true;
+            chartArea13.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea13.AxisX.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea13.AxisY.IsLabelAutoFit = false;
+            chartArea13.AxisY.LabelAutoFitMaxFontSize = 8;
+            chartArea13.AxisY.LabelStyle.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea13.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea13.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea13.AxisY.TitleFont = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea13.BackColor = System.Drawing.Color.Transparent;
+            chartArea13.BorderColor = System.Drawing.Color.Transparent;
+            chartArea13.BorderWidth = 0;
+            chartArea13.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea13);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart1.Location = new System.Drawing.Point(0, 25);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
-            series4.BorderWidth = 4;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series4.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.IsVisibleInLegend = false;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series16.BorderWidth = 4;
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series16.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series16.IsVisibleInLegend = false;
+            series16.LabelForeColor = System.Drawing.Color.White;
+            series16.Legend = "Legend1";
+            series16.Name = "Series1";
+            this.chart1.Series.Add(series16);
             this.chart1.Size = new System.Drawing.Size(100, 53);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
@@ -2678,6 +2783,9 @@
             this.lblDetails.TabIndex = 0;
             this.lblDetails.Text = "DPS out";
             this.lblDetails.Click += new System.EventHandler(this.lblDetails_Click);
+            this.lblDetails.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseDown);
+            this.lblDetails.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseMove);
+            this.lblDetails.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseUp);
             // 
             // panel5
             // 
@@ -2775,21 +2883,21 @@
             this.dgDetails.AllowUserToDeleteRows = false;
             this.dgDetails.AllowUserToResizeColumns = false;
             this.dgDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle44;
             this.dgDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgDetails.BackgroundColor = System.Drawing.Color.Black;
             this.dgDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.dgDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDetails.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -2802,8 +2910,8 @@
             this.dgDetails.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgDetails.RowHeadersVisible = false;
             this.dgDetails.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgDetails.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgDetails.RowsDefaultCellStyle = dataGridViewCellStyle46;
             this.dgDetails.RowTemplate.Height = 28;
             this.dgDetails.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -2835,7 +2943,7 @@
             this.Details.Controls.Add(this.panel6);
             this.Details.Controls.Add(this.pnlDetailsMenu);
             this.Details.Controls.Add(this.pnltooltip);
-            this.Details.Location = new System.Drawing.Point(583, 378);
+            this.Details.Location = new System.Drawing.Point(510, 439);
             this.Details.MinimumSize = new System.Drawing.Size(100, 100);
             this.Details.Name = "Details";
             this.Details.Size = new System.Drawing.Size(142, 100);
@@ -2899,7 +3007,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(100, 25);
+            this.panel3.Size = new System.Drawing.Size(319, 25);
             this.panel3.TabIndex = 2;
             this.panel3.Tag = "1";
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
@@ -2913,40 +3021,40 @@
             this.DPSoutSkills.Controls.Add(this.chart3);
             this.DPSoutSkills.Controls.Add(this.panel3);
             this.DPSoutSkills.Controls.Add(this.panel13);
-            this.DPSoutSkills.Location = new System.Drawing.Point(477, 377);
+            this.DPSoutSkills.Location = new System.Drawing.Point(385, 878);
             this.DPSoutSkills.MinimumSize = new System.Drawing.Size(100, 100);
             this.DPSoutSkills.Name = "DPSoutSkills";
-            this.DPSoutSkills.Size = new System.Drawing.Size(100, 100);
+            this.DPSoutSkills.Size = new System.Drawing.Size(319, 150);
             this.DPSoutSkills.TabIndex = 20;
             // 
             // chart3
             // 
             this.chart3.BackColor = System.Drawing.Color.Black;
-            chartArea4.AxisX.LabelStyle.Enabled = false;
-            chartArea4.AxisY.IsLabelAutoFit = false;
-            chartArea4.AxisY.LabelStyle.Enabled = false;
-            chartArea4.BackColor = System.Drawing.Color.Black;
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
+            chartArea14.AxisX.LabelStyle.Enabled = false;
+            chartArea14.AxisY.IsLabelAutoFit = false;
+            chartArea14.AxisY.LabelStyle.Enabled = false;
+            chartArea14.BackColor = System.Drawing.Color.Black;
+            chartArea14.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea14);
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart3.Location = new System.Drawing.Point(0, 25);
             this.chart3.Name = "chart3";
-            series5.BackSecondaryColor = System.Drawing.Color.Black;
-            series5.BorderColor = System.Drawing.Color.Black;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series5.Color = System.Drawing.Color.Black;
-            series5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.IsVisibleInLegend = false;
-            series5.LabelForeColor = System.Drawing.Color.White;
-            series5.Name = "Series1";
-            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
-            series5.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
-            series5.SmartLabelStyle.CalloutBackColor = System.Drawing.Color.Black;
-            series5.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.Box;
-            series5.YValuesPerPoint = 25;
-            this.chart3.Series.Add(series5);
-            this.chart3.Size = new System.Drawing.Size(100, 53);
+            series17.BackSecondaryColor = System.Drawing.Color.Black;
+            series17.BorderColor = System.Drawing.Color.Black;
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series17.Color = System.Drawing.Color.Black;
+            series17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series17.IsVisibleInLegend = false;
+            series17.LabelForeColor = System.Drawing.Color.White;
+            series17.Name = "Series1";
+            series17.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series17.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series17.SmartLabelStyle.CalloutBackColor = System.Drawing.Color.Black;
+            series17.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.Box;
+            series17.YValuesPerPoint = 25;
+            this.chart3.Series.Add(series17);
+            this.chart3.Size = new System.Drawing.Size(319, 103);
             this.chart3.TabIndex = 3;
             this.chart3.Text = "chart3";
             // 
@@ -2985,14 +3093,14 @@
             this.dgDPSOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDPSOut.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgDPSOut.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDPSOut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDPSOut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dgDPSOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDPSOut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -3022,8 +3130,8 @@
             this.dgDPSOut.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgDPSOut.RowHeadersVisible = false;
             this.dgDPSOut.RowHeadersWidth = 62;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgDPSOut.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgDPSOut.RowsDefaultCellStyle = dataGridViewCellStyle54;
             this.dgDPSOut.RowTemplate.Height = 28;
             this.dgDPSOut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgDPSOut.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -3048,9 +3156,9 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "DMG";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle48;
             this.Column3.HeaderText = "DMG";
             this.Column3.Name = "Column3";
             this.Column3.Width = 48;
@@ -3058,10 +3166,10 @@
             // Column4
             // 
             this.Column4.DataPropertyName = "DPS";
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.White;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle49;
             this.Column4.HeaderText = "DP(A)";
             this.Column4.Name = "Column4";
             this.Column4.Width = 60;
@@ -3085,9 +3193,9 @@
             // Column7
             // 
             this.Column7.DataPropertyName = "HEAL";
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.White;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle50;
             this.Column7.HeaderText = "HEAL";
             this.Column7.Name = "Column7";
             this.Column7.Width = 54;
@@ -3095,10 +3203,10 @@
             // Column8
             // 
             this.Column8.DataPropertyName = "HPS";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.White;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle51;
             this.Column8.HeaderText = "HP(A)";
             this.Column8.Name = "Column8";
             this.Column8.Width = 60;
@@ -3122,9 +3230,9 @@
             // Column11
             // 
             this.Column11.DataPropertyName = "DMGin";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.White;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle52;
             this.Column11.HeaderText = "DMGin";
             this.Column11.Name = "Column11";
             this.Column11.Width = 60;
@@ -3132,9 +3240,9 @@
             // Column12
             // 
             this.Column12.DataPropertyName = "HEALin";
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.White;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle53;
             this.Column12.HeaderText = "HEALin";
             this.Column12.Name = "Column12";
             this.Column12.Width = 66;
@@ -3234,39 +3342,6 @@
             // 
             this.bgwParseOld.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwParseOld_DoWork);
             this.bgwParseOld.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwParseOld_RunWorkerCompleted);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label37);
-            this.panel1.Location = new System.Drawing.Point(1935, 79);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 532);
-            this.panel1.TabIndex = 30;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(33, 124);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(180, 100);
-            this.pictureBox4.MinimumSize = new System.Drawing.Size(180, 100);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(180, 100);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Black;
-            this.label37.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(30, 39);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(175, 15);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Loading please wait ....";
             // 
             // timer1
             // 
@@ -3477,6 +3552,7 @@
             this.btnArchiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnArchiv.TabIndex = 39;
             this.btnArchiv.TabStop = false;
+            this.btnArchiv.Visible = false;
             this.btnArchiv.Click += new System.EventHandler(this.btnArchiv_Click);
             this.btnArchiv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button2_MouseDown);
             this.btnArchiv.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button2_MouseMove);
@@ -3505,20 +3581,612 @@
             this.bgGet.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgGet_DoWork);
             this.bgGet.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgGet_ProgressChanged);
             // 
+            // Enemy
+            // 
+            this.Enemy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Enemy.Controls.Add(this.chart5);
+            this.Enemy.Controls.Add(this.panel10);
+            this.Enemy.Controls.Add(this.panel15);
+            this.Enemy.Location = new System.Drawing.Point(52, 715);
+            this.Enemy.MinimumSize = new System.Drawing.Size(100, 100);
+            this.Enemy.Name = "Enemy";
+            this.Enemy.Size = new System.Drawing.Size(277, 150);
+            this.Enemy.TabIndex = 40;
+            // 
+            // chart5
+            // 
+            this.chart5.BackColor = System.Drawing.Color.Black;
+            chartArea15.AxisX.LabelStyle.Enabled = false;
+            chartArea15.AxisY.IsLabelAutoFit = false;
+            chartArea15.AxisY.LabelStyle.Enabled = false;
+            chartArea15.BackColor = System.Drawing.Color.Black;
+            chartArea15.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea15);
+            this.chart5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart5.Location = new System.Drawing.Point(0, 25);
+            this.chart5.Name = "chart5";
+            series18.BackSecondaryColor = System.Drawing.Color.Black;
+            series18.BorderColor = System.Drawing.Color.Black;
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series18.Color = System.Drawing.Color.Black;
+            series18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series18.IsVisibleInLegend = false;
+            series18.LabelForeColor = System.Drawing.Color.White;
+            series18.Name = "Series1";
+            series18.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.BrightPastel;
+            series18.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.No;
+            series18.SmartLabelStyle.CalloutBackColor = System.Drawing.Color.Black;
+            series18.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.Box;
+            series18.YValuesPerPoint = 25;
+            this.chart5.Series.Add(series18);
+            this.chart5.Size = new System.Drawing.Size(277, 103);
+            this.chart5.TabIndex = 3;
+            this.chart5.Text = "chart5";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(277, 25);
+            this.panel10.TabIndex = 2;
+            this.panel10.Tag = "1";
+            this.panel10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            this.panel10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label18.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(0, 0);
+            this.label18.Name = "label18";
+            this.label18.Padding = new System.Windows.Forms.Padding(5);
+            this.label18.Size = new System.Drawing.Size(71, 23);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Enemy (#)";
+            this.label18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseDown);
+            this.label18.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseMove);
+            this.label18.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseUp);
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel15.Location = new System.Drawing.Point(0, 128);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(277, 22);
+            this.panel15.TabIndex = 1;
+            this.panel15.Tag = "1";
+            this.panel15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel15.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel15.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // Buffs
+            // 
+            this.Buffs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Buffs.Controls.Add(this.dataGridView1);
+            this.Buffs.Controls.Add(this.panel23);
+            this.Buffs.Controls.Add(this.panel33);
+            this.Buffs.Controls.Add(this.panel34);
+            this.Buffs.Controls.Add(this.panel35);
+            this.Buffs.Location = new System.Drawing.Point(39, 878);
+            this.Buffs.MinimumSize = new System.Drawing.Size(100, 100);
+            this.Buffs.Name = "Buffs";
+            this.Buffs.Size = new System.Drawing.Size(317, 160);
+            this.Buffs.TabIndex = 41;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle55;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle56.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle56;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle57;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(317, 113);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.Black;
+            this.panel23.Controls.Add(this.label19);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(317, 25);
+            this.panel23.TabIndex = 2;
+            this.panel23.Tag = "1";
+            this.panel23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel23.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            this.panel23.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label19.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(0, 0);
+            this.label19.Name = "label19";
+            this.label19.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label19.Size = new System.Drawing.Size(148, 23);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Buffs";
+            this.label19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseDown);
+            this.label19.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseMove);
+            this.label19.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseUp);
+            // 
+            // panel33
+            // 
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel33.Location = new System.Drawing.Point(0, 138);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(317, 22);
+            this.panel33.TabIndex = 1;
+            this.panel33.Tag = "1";
+            this.panel33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel33.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel33.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel34.Controls.Add(this.label26);
+            this.panel34.Controls.Add(this.label30);
+            this.panel34.Controls.Add(this.label34);
+            this.panel34.Controls.Add(this.label36);
+            this.panel34.Controls.Add(this.label39);
+            this.panel34.Location = new System.Drawing.Point(-1, 25);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(162, 132);
+            this.panel34.TabIndex = 3;
+            this.panel34.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label26.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(0, 100);
+            this.label26.Name = "label26";
+            this.label26.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label26.Size = new System.Drawing.Size(180, 25);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Conditions";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label30.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(0, 75);
+            this.label30.Name = "label30";
+            this.label30.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label30.Size = new System.Drawing.Size(156, 25);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "HPS in";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label34.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(0, 50);
+            this.label34.Name = "label34";
+            this.label34.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label34.Size = new System.Drawing.Size(162, 25);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "HPS out";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label36.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Location = new System.Drawing.Point(0, 25);
+            this.label36.Name = "label36";
+            this.label36.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label36.Size = new System.Drawing.Size(156, 25);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "DPS in";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label39.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(0, 0);
+            this.label39.Name = "label39";
+            this.label39.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label39.Size = new System.Drawing.Size(162, 25);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "DPS out";
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel35.Controls.Add(this.button8);
+            this.panel35.Controls.Add(this.textBox3);
+            this.panel35.Controls.Add(this.label42);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(0, 0);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(317, 160);
+            this.panel35.TabIndex = 32;
+            this.panel35.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(290, 0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(27, 160);
+            this.button8.TabIndex = 89;
+            this.button8.Text = "x";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(25, 56);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(299, 138);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(21, 23);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(81, 19);
+            this.label42.TabIndex = 3;
+            this.label42.Text = "tutorial";
+            // 
+            // Debuffs
+            // 
+            this.Debuffs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Debuffs.Controls.Add(this.dataGridView2);
+            this.Debuffs.Controls.Add(this.panel40);
+            this.Debuffs.Controls.Add(this.panel41);
+            this.Debuffs.Controls.Add(this.panel42);
+            this.Debuffs.Controls.Add(this.panel43);
+            this.Debuffs.Location = new System.Drawing.Point(346, 715);
+            this.Debuffs.MinimumSize = new System.Drawing.Size(100, 100);
+            this.Debuffs.Name = "Debuffs";
+            this.Debuffs.Size = new System.Drawing.Size(358, 125);
+            this.Debuffs.TabIndex = 42;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle58;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle59;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.GridColor = System.Drawing.Color.Black;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 62;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle60;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(358, 78);
+            this.dataGridView2.TabIndex = 15;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.Black;
+            this.panel40.Controls.Add(this.label43);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel40.Location = new System.Drawing.Point(0, 0);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(358, 25);
+            this.panel40.TabIndex = 2;
+            this.panel40.Tag = "1";
+            this.panel40.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel40.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            this.panel40.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseUp);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label43.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.White;
+            this.label43.Location = new System.Drawing.Point(0, 0);
+            this.label43.Name = "label43";
+            this.label43.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label43.Size = new System.Drawing.Size(160, 23);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Debuffs";
+            this.label43.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseDown);
+            this.label43.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseMove);
+            this.label43.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel3h_MouseUp);
+            // 
+            // panel41
+            // 
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel41.Location = new System.Drawing.Point(0, 103);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(358, 22);
+            this.panel41.TabIndex = 1;
+            this.panel41.Tag = "1";
+            this.panel41.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel41.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel41.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel42.Controls.Add(this.label46);
+            this.panel42.Controls.Add(this.label47);
+            this.panel42.Controls.Add(this.label51);
+            this.panel42.Controls.Add(this.label53);
+            this.panel42.Controls.Add(this.label55);
+            this.panel42.Location = new System.Drawing.Point(-1, 25);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(162, 132);
+            this.panel42.TabIndex = 3;
+            this.panel42.Visible = false;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label46.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label46.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(0, 100);
+            this.label46.Name = "label46";
+            this.label46.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label46.Size = new System.Drawing.Size(180, 25);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Conditions";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label47.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label47.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Black;
+            this.label47.Location = new System.Drawing.Point(0, 75);
+            this.label47.Name = "label47";
+            this.label47.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label47.Size = new System.Drawing.Size(156, 25);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "HPS in";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label51.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label51.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Black;
+            this.label51.Location = new System.Drawing.Point(0, 50);
+            this.label51.Name = "label51";
+            this.label51.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label51.Size = new System.Drawing.Size(162, 25);
+            this.label51.TabIndex = 3;
+            this.label51.Text = "HPS out";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label53.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Black;
+            this.label53.Location = new System.Drawing.Point(0, 25);
+            this.label53.Name = "label53";
+            this.label53.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label53.Size = new System.Drawing.Size(156, 25);
+            this.label53.TabIndex = 2;
+            this.label53.Text = "DPS in";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label55.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label55.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.Black;
+            this.label55.Location = new System.Drawing.Point(0, 0);
+            this.label55.Name = "label55";
+            this.label55.Padding = new System.Windows.Forms.Padding(5, 5, 106, 5);
+            this.label55.Size = new System.Drawing.Size(162, 25);
+            this.label55.TabIndex = 1;
+            this.label55.Text = "DPS out";
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel43.Controls.Add(this.button10);
+            this.panel43.Controls.Add(this.textBox4);
+            this.panel43.Controls.Add(this.label59);
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel43.Location = new System.Drawing.Point(0, 0);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(358, 125);
+            this.panel43.TabIndex = 32;
+            this.panel43.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(331, 0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(27, 125);
+            this.button10.TabIndex = 89;
+            this.button10.Text = "x";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(25, 56);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(299, 138);
+            this.textBox4.TabIndex = 4;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(21, 23);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(81, 19);
+            this.label59.TabIndex = 3;
+            this.label59.Text = "tutorial";
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 500;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(646, 514);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(122, 135);
+            this.button14.TabIndex = 43;
+            this.button14.Text = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
+            // 
+            // timer5
+            // 
+            this.timer5.Interval = 3000;
+            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            // 
+            // button9
+            // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(345, 357);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(175, 26);
+            this.button9.TabIndex = 107;
+            this.button9.Text = "Hide Settings";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
+            // button15
+            // 
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(117, 357);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(87, 26);
+            this.button15.TabIndex = 108;
+            this.button15.Text = "Logs/Archiv";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.btnArchiv_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(1733, 1074);
+            this.ClientSize = new System.Drawing.Size(1780, 1074);
+            this.Controls.Add(this.HPSoutGraph);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.Debuffs);
+            this.Controls.Add(this.Buffs);
+            this.Controls.Add(this.Enemy);
             this.Controls.Add(this.SettingsWindow);
             this.Controls.Add(this.btnArchiv);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel26);
             this.Controls.Add(this.Fights);
             this.Controls.Add(this.RaidDPSout);
-            this.Controls.Add(this.HPSoutGraph);
             this.Controls.Add(this.DPSinGraph);
             this.Controls.Add(this.DPSoutGraph);
             this.Controls.Add(this.Details);
@@ -3564,7 +4232,6 @@
             this.DPSinGraph.ResumeLayout(false);
             this.SettingsWindow.ResumeLayout(false);
             this.SettingsWindow.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -3591,9 +4258,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgDPSOut)).EndInit();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel26.ResumeLayout(false);
             this.pnlttut.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
@@ -3605,6 +4269,26 @@
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnArchiv)).EndInit();
+            this.Enemy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.Buffs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.Debuffs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3689,11 +4373,7 @@
         private System.ComponentModel.BackgroundWorker bgwParseOld;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox16;
@@ -3729,7 +4409,6 @@
         private System.Windows.Forms.ComboBox uiLang;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btnStartRaidFight;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.TextBox textBox1;
@@ -3815,7 +4494,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel thisOnlinePnl;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Button mergeFights;
@@ -3840,6 +4518,51 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.Panel Enemy;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel Buffs;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Panel Debuffs;
+        public System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnSimFight;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button15;
     }
 }
 

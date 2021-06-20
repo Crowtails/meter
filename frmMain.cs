@@ -12,6 +12,7 @@ using System.Data.OleDb;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -33,16 +34,14 @@ namespace Crowtails
         public string _mygroup = "";
         public string _myclass = "";
 
-        SQLiteConnection m_dbConnection_live = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.db;Version=3;");
+        SQLiteConnection m_dbConnection_live = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.1.1.0.0.db;Version=3;");
 
         public List<string> sqlQueue = new List<string>();
 
         string cID = "";
         string cID_selected = "";
-        DateTime lastD = DateTime.Now;
-
-        DateTime lastAction = DateTime.Now;
-
+        DateTime lastD = DateTime.UtcNow;
+        DateTime lastAction = DateTime.UtcNow;
         int lastNetID = 0;
         bool allhidden = false;
         int ShowDetailsNo = 0;
@@ -57,6 +56,8 @@ namespace Crowtails
         int My;
         bool isMoving;
         bool isSizing;
+
+        public int CombatSimRows = 0;
 
         public string _myaccount = "";
 
@@ -84,7 +85,7 @@ namespace Crowtails
         bool isCollided;
         public List<string> NetworkQueue = new List<string>();
 
-        SQLiteConnection m_dbConnection_readonly = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.db;Mode=ReadOnly;Version=3;Read Only=True");
+        SQLiteConnection m_dbConnection_readonly = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.1.1.0.0.db;Mode=ReadOnly;Version=3;Read Only=True");
 
 
         public frmMain()
@@ -93,9 +94,9 @@ namespace Crowtails
             InitializeComponent();
 
 
-            panel1.BringToFront();
-            panel1.Dock = DockStyle.Fill;
-            panel1.Visible = true;
+            //panel1.BringToFront();
+            //panel1.Dock = DockStyle.Fill;
+            //panel1.Visible = true;
 
             try
             {
@@ -109,6 +110,9 @@ namespace Crowtails
                 myPanels.Add(SettingsWindow);
                 myPanels.Add(DPSoutSkills);
                 myPanels.Add(RaidDPSout);
+                myPanels.Add(Enemy);
+                myPanels.Add(Buffs);
+                myPanels.Add(Debuffs);
                 //myPanels.Add(RaidHPSout);
 
             }
@@ -133,11 +137,11 @@ namespace Crowtails
                 }
             }
             catch (Exception ex) { }
-            pictureBox4.Left = Width / 2 - 90;
-            pictureBox4.Top = Height / 2 - 50;
+            //pictureBox4.Left = Width / 2 - 90;
+            //pictureBox4.Top = Height / 2 - 50;
 
-            label37.Left = Width / 2 - 90;
-            label37.Top = Height / 2 - 90;
+            //label37.Left = Width / 2 - 90;
+            //label37.Top = Height / 2 - 90;
 
         }
 
@@ -190,7 +194,7 @@ namespace Crowtails
                             }
                             else
                             {
-                                Thread.Sleep(1000);
+                                Thread.Sleep(10);
                             }
 
                         }
@@ -204,6 +208,15 @@ namespace Crowtails
         {
             try
             {
+                if (e.UserState.ToString().Contains("Your Refreshing Ice Weave"))
+                {
+                    button14.Visible = false;
+                    timer5.Enabled = false;
+                    timer5.Stop();
+                    timer5.Enabled = true;
+                    timer5.Start();
+                    button14.Visible = true;
+                }
                 string thisline = parseLine(e.UserState.ToString(), _myclass, _myaccount, _mygroup);
                 sqlQueue.Add(thisline);
             }
@@ -231,8 +244,10 @@ namespace Crowtails
         public void createDB()
         {
 
-            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.db;Version=3;");
-            string sql = "create table stats (id INTEGER PRIMARY KEY AUTOINCREMENT, fromuser varchar(50),  charclass varchar(5),caster varchar(50) ,skill varchar(100), cID varchar(20), dateTime varchar(25),self bool,dmg bool,heal bool,restore bool,crit bool,target varchar(50), action varchar(50), amount int)";
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.1.1.0.0.db;Version=3;");
+            string sql = "create table stats (id INTEGER PRIMARY KEY AUTOINCREMENT, fromuser varchar(50),  charclass varchar(5),caster varchar(50) ,skill varchar(100), cID varchar(20), dateTime varchar(25),self bool,dmg bool,heal bool,restore bool,crit bool,target varchar(50), action varchar(50), amount int, casterid varchar(50), targetid varchar(50), powerid varchar(50), typeid varchar(50));"
+                + "create table dead(id INTEGER PRIMARY KEY AUTOINCREMENT, dateTime varchar(25), cID varchar(20), targetid varchar(50)); create table bufftiming(id INTEGER PRIMARY KEY AUTOINCREMENT,dateTime varchar(25), cID varchar(20), name varchar(50), buff bool, debuff bool ); create table buffs(id INTEGER PRIMARY KEY AUTOINCREMENT); create table powers(id INTEGER PRIMARY KEY AUTOINCREMENT); create table pointtoscreen(id INTEGER PRIMARY KEY AUTOINCREMENT, x int, y int, swith int, sheight int);";
+            
             try
             {
                 m_dbConnection.Open();
@@ -290,9 +305,99 @@ namespace Crowtails
             return Guid.NewGuid().ToString("N");
         }
 
+        public DataSet getDetails(string thatuser) {
+            string limit = "";
+            SQLiteDataAdapter da1 = new SQLiteDataAdapter(
+              "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»', IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit, group_concat(DISTINCT  REPLACE(REPLACE(action,' (Critical)',''), ' damage','')) as typ,group_concat(DISTINCT  target) as Target from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and  dmg = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
+              "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit, group_concat(DISTINCT  REPLACE(REPLACE(action,' (Critical)',''), ' damage','')) as typ, group_concat(DISTINCT  caster) as Caster  from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster not like '" + thatuser +"' and target = '" + thatuser +"' and  dmg = 'True'  and amount > 0 group by skill  order by sum(amount) desc;" +
+              "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit, group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and  heal = 'True'  and amount > 0 group by skill  order by sum(amount) desc;" +
+              "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit, group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster not like '" + thatuser +"' and target = '" + thatuser +"' and  heal = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
+              "select sum(amount) || ' ' || action as Q from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and  dmg = 'True' and amount > 0 group by action order by sum(amount) desc;" +
+              "select sum(amount) || ' ' || action as Q from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster not like '" + thatuser +"' and target = '" + thatuser +"' and  dmg = 'True' and amount > 0 group by action order by sum(amount) desc;" +
+              "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and amount > 0 and dmg = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
+              "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and amount > 0 and heal = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
+              "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing, heal from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and ((caster not like '" + thatuser +"' and dmg = 'True') or heal = 'True') and Target = '" + thatuser +"' and amount > 0 group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
+              "select IFNULL(sum(amount),0) as TotalDMGout from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and dmg = 'True' and target not like '" + thatuser +"' and amount not like '0';" +
+              "select IFNULL(max(amount),0) as Maxhit from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and dmg = 'True' and target not like '" + thatuser +"' and amount not like '0';" +
+              "select IFNULL(sum(amount),0) as TotalHealout from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and heal = 'True' and amount not like '0';" +
+              "select IFNULL(max(amount),0) as Maxheal from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and heal = 'True' and amount not like '0';" +
+              "select count(*) as DMGHitCount from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and dmg = 'True' and target not like '" + thatuser +"' and amount not like '0';" +
+              "select count(*) as HealHitcount from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and heal = 'True' and amount not like '0';" +
+              "select IFNULL(sum(amount),0) as TotalHealin from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target = '" + thatuser +"' and heal = 'True' and amount not like '0';" +
+              "select IFNULL(sum(amount),0) as TotalDMGin from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target = '" + thatuser +"' and caster not like '" + thatuser +"' and dmg = 'True' and amount not like '0';" +
+              "select caster || '(' || sum(amount) || ')' as MostdangerEnemy from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target = '" + thatuser +"' and caster not like '" + thatuser +"' and dmg = 'True' and amount not like '0' group by target order by count(*) desc;" +
+              "select caster || '(' || count(*) || ')' as YourHealer from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and heal = 'True' and target = '" + thatuser +"' and amount not like '0' group by target order by count(*) desc;" +
+              "select IFNULL( target || '(' || sum(amount) || ')' , '') as YourTarget from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target not like '" + thatuser +"' and caster = '" + thatuser +"' and dmg = 'True' and amount not like '0' group by target order by count(*) desc;" +
+              "select count(*) as Dodges from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and 'action' like '%dodge%';" +
+              "select min(dateTime) as Start from stats where cID = '" + cID + "';" +
+              "select max(dateTime) as Ende from stats where cID = '" + cID + "';" +
+              "select count(*) as DMGCritOut from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and dmg = 'True' and crit = 'True' and amount not like '0' group by target order by count(*) desc;" +
+              "select count(*) as HealCritOut from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster = '" + thatuser +"' and heal = 'True' and crit = 'True' and amount not like '0' group by target order by count(*) desc;" +
+              "select count(*) as dmghitinc  from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target = '" + thatuser +"' and dmg = 'True' and amount not like '0';" +
+              "select count(*) as DMGCritIn from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster not like '" + thatuser +"' and target = '" + thatuser +"' and dmg = 'True' and crit = 'True' and amount not like '0' group by target order by count(*) desc;" +
+              "select count(*) as healhitinc from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and target = '" + thatuser +"' and heal = 'True' and amount not like '0';" +
+              "select count(*) as HealCritIn from stats where cID = '" + cID + "' and fromuser = '" + thatuser +"' and caster not like '" + thatuser +"' and target = '" + thatuser +"' and heal = 'True' and crit = 'True' and amount not like '0' group by target order by count(*) desc;" +
+
+              "select fromuser as Groupmember from stats where cID = '" + cID + "' group by fromuser;" +
+              "select target as Enemys from stats where cID = '" + cID + "' and fromuser not like target group by target;" +
+
+               "select a.fromuser, a.charclass , IFNULL(DMG,'0') as DMG,IFNULL(DPS,'0') as DPS, a.mi , a.ma , IFNULL(HEAL,'0') as HEAL,IFNULL(HPS,'0') as HPS,  b.mi , b.ma , IFNULL(DMGin,'0') as DMGin, IFNULL(HEALin,'0') as HEALin, '0' as Time, a.CH as DMGC, b.CH as DPSC, c.CH as DPSinC, d.CH as HPSC from (select MIN(dateTime) as mi, MAX(dateTime) as ma,SUM(amount) as DMG, '' as DPS, fromuser, cID, charclass, count(*) as CH from stats where  cID = '" + cID + "' and  dmg = 'True' and caster = fromuser group by fromuser,cID,charclass) as a " +
+              " left outer join (select MIN(dateTime) as mi, MAX(dateTime) as ma,SUM(amount) as HEAL, '' as HPS, fromuser, cID,charclass, count(*) as CH from stats where  cID = '" + cID + "' and  heal = 'True' and caster = fromuser group by fromuser,cID,charclass) as b on b.fromuser = a.fromuser" +
+              " left  outer join (select MIN(dateTime) as mi, MAX(dateTime) as ma,SUM(amount) as DMGin, '' as DPSin, fromuser, cID,charclass, count(*) as CH from stats where  cID = '" + cID + "' and  dmg = 'True' and target = fromuser and caster not like fromuser group by fromuser,cID,charclass) as c on c.fromuser = a.fromuser" +
+              " left  outer join (select MIN(dateTime) as mi, MAX(dateTime) as ma,SUM(amount) as HEALin, '' as HPSin, fromuser, cID,charclass, count(*) as CH from stats where  cID = '" + cID + "' and  heal = 'True' and target = fromuser and caster not like fromuser group by fromuser,cID,charclass) as d on d.fromuser = a.fromuser order by IFNULL(DMG,'0') desc;"
+
+              , m_dbConnection_readonly);
+
+            DataSet myDetails = new DataSet();
+            try
+            {
+                da1.Fill(myDetails); myDetails.Tables[0].TableName = "Detail_1_DMG";
+                myDetails.Tables[1].TableName = "Detail_2_DMGin";
+                myDetails.Tables[2].TableName = "Detail_3_Heal";
+                myDetails.Tables[3].TableName = "Detail_4_Healin";
+                myDetails.Tables[4].TableName = "DMG_type_out";
+                myDetails.Tables[5].TableName = "DMG_type_in";
+                myDetails.Tables[6].TableName = "DMG_out_Graph";
+                myDetails.Tables[7].TableName = "Heal_out_Graph";
+                myDetails.Tables[8].TableName = "Heal_in_DMG_in_Graph";
+                myDetails.Tables[9].TableName = "TotalDMGout";
+                myDetails.Tables[10].TableName = "Maxhit";
+                myDetails.Tables[11].TableName = "TotalHealout";
+                myDetails.Tables[12].TableName = "Maxheal";
+                myDetails.Tables[13].TableName = "DMGHitCount";
+                myDetails.Tables[14].TableName = "HealHitcount";
+                myDetails.Tables[15].TableName = "TotalHealin";
+                myDetails.Tables[16].TableName = "TotalDMGin";
+                myDetails.Tables[17].TableName = "MostdangerEnemy";
+                myDetails.Tables[18].TableName = "YourHealer";
+                myDetails.Tables[19].TableName = "YourTarget";
+                myDetails.Tables[20].TableName = "Dodges";
+                myDetails.Tables[21].TableName = "Start";
+                myDetails.Tables[22].TableName = "Stop";
+                myDetails.Tables[23].TableName = "DMGCritOut";
+                myDetails.Tables[24].TableName = "HealCritOut";
+                myDetails.Tables[25].TableName = "dmghitinc";
+                myDetails.Tables[26].TableName = "DMGCritIn";
+                myDetails.Tables[27].TableName = "healhitinc";
+                myDetails.Tables[28].TableName = "HealCritIn";
+                myDetails.Tables[29].TableName = "group_user";
+                myDetails.Tables[30].TableName = "ememys_battle";
+                myDetails.Tables[31].TableName = "RAID";
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            
+
+            return myDetails;
+        }
+
         private string parseLine(string line, string myclass, string myaccount, string mygroup)
         {
-            lastAction = DateTime.Now;
+            
+            lastAction = DateTime.UtcNow;
             string _s = line;
 
             Match match1 = null;
@@ -317,6 +422,30 @@ namespace Crowtails
                 return "";
             }
 
+
+            _s = _s.Replace("getroffen", "hit")
+                .Replace("für", "for")
+                .Replace("Kritischer", "critical")
+                .Replace("Schaden", "damage")
+                .Replace("Du", "You")
+                .Replace("Dein", "Your")
+                .Replace("wiederhergestellt", "restored")
+                .Replace("gepafft", "whiffed")
+                .Replace("erschöpft", "drained")
+                .Replace("geheilt", "healed");
+
+            _s = _s.Replace("цель", "hit")
+                .Replace("на", "for")
+                .Replace("поражает", "hit")
+                .Replace("Критический удар", "critical")
+                .Replace("урон", "damage")
+                .Replace("Вы", "You")
+                .Replace("Ваш", "Your")
+                .Replace("восстанавливает", "restored")
+                .Replace("поражает", "whiffed")
+                .Replace("поглощает", "drained")
+                .Replace("исцеляет", "healed");
+
             /*
             #caster_title# = Your, Playername, NPC
             #power_title# 
@@ -331,7 +460,7 @@ namespace Crowtails
                 MessageBox.Show("Repair Crowfalls and contact crowfall support logfile failture\r\nCombat is trying to find a client adapter that does not exist for this entity");
             }
 
-            if (Properties.Settings.Default.gameLang == 0)
+            if (Properties.Settings.Default.gameLang == 0 && 7 == 1)
             {
                 _s = _s.Replace(" Minion", "");
                 
@@ -375,41 +504,6 @@ namespace Crowtails
             3 ES
             4 FR
             */
-
-            switch (Properties.Settings.Default.gameLang)
-            {
-                case 1:
-                    _s = _s.Replace("getroffen", "hit")
-                        .Replace("für", "for")
-                        .Replace("Kritischer", "critical")
-                        .Replace("Schaden", "damage")
-                        .Replace("Du", "You")
-                        .Replace("Dein", "Your")
-                        .Replace("wiederhergestellt", "restored")
-                        .Replace("gepafft", "whiffed")
-                        .Replace("erschöpft", "drained")
-                        .Replace("geheilt", "healed");
-                    break;
-                case 2:
-                    _s = _s.Replace("цель", "hit")
-                        .Replace("на", "for")
-                        .Replace("поражает", "hit")
-                        .Replace("Критический удар", "critical")
-                        .Replace("урон", "damage")
-                        .Replace("Вы", "You")
-                        .Replace("Ваш", "Your")
-                        .Replace("восстанавливает", "restored")
-                        .Replace("поражает", "whiffed")
-                        .Replace("поглощает", "drained")
-                        .Replace("исцеляет", "healed");
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                default:
-                    break;
-            }
 
             match = new Regex(@"(.*) INFO    COMBAT    - Combat _\|\|_ Event=\[(" + myaccount + @"|\w*)(.*) (hit|healed|drained|whiffed|restored) (" + myaccount + @"|.*) for (\d*)(.*)\.\]").Match(_s);
 
@@ -459,7 +553,9 @@ namespace Crowtails
                     }
                     else {
                         string values = "'" + myaccount + "','" + myclass + "','" + l.caster + "'," + "'" + l.skill + "','@@CID@@','" + l.dateTime + "','" + l.self + "','" + l.dmg + "','" + l.heal + "','" + l.restore + "','" + l.crit + "','" + l.target + "','" + l.action + "','" + l.amount + "'";
-                        return "insert into stats (fromuser ,charclass ,caster, skill, cID, dateTime, self, dmg, heal, restore, crit, target, action, amount)values(" + values + ")";
+                        string sql = "insert into stats (fromuser ,charclass ,caster, skill, cID, dateTime, self, dmg, heal, restore, crit, target, action, amount)values(" + values + ")";
+                        sqlQueue.Add(sql);
+                        return "";
                     }
 
 
@@ -507,6 +603,7 @@ namespace Crowtails
 
         }
 
+        DataSet fDetail = new DataSet();
         private void tme_live_view_Tick(object sender, EventArgs e)
         {
 
@@ -520,7 +617,7 @@ namespace Crowtails
                 moa++;
                 if (Properties.Settings.Default.ShowOnlyInFight)
                 {
-                    DateTime curD = DateTime.Now;
+                    DateTime curD = DateTime.UtcNow;
                     var diffInSeconds = (curD - lastD).TotalSeconds;
                     if (diffInSeconds > 15 && !allhidden && !SettingsWindow.Visible)
                     {
@@ -543,7 +640,7 @@ namespace Crowtails
                         allhidden = false;
                     }
                 }
-                DateTime curD1 = DateTime.Now;
+                DateTime curD1 = DateTime.UtcNow;
                 var diffInSeconds1 = (curD1 - lastAction).TotalSeconds;
 
                 if (diffInSeconds1 < 180 || moa > 7)
@@ -555,17 +652,21 @@ namespace Crowtails
                 {
 
                     tme_live_view.Enabled = false;
+                    string limit = "";
+                    if (CombatSimRows > 0) {
+                        limit = " LIMIT " + CombatSimRows.ToString();
+                    }
 
                     SQLiteDataAdapter da1 = new SQLiteDataAdapter(
-                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»', IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit,group_concat(DISTINCT  target) as Target from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and  dmg = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
-                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit,group_concat(DISTINCT  caster) as Caster  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster not like '" + fromuser + "' and target = '" + fromuser + "' and  dmg = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
-                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit,group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and  heal = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
-                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit,group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster not like '" + fromuser + "' and target = '" + fromuser + "' and  heal = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
+                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»', IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit, group_concat(DISTINCT  REPLACE(REPLACE(action,' (Critical)',''), ' damage','')) as typ,group_concat(DISTINCT  target) as Target from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and  dmg = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
+                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit, group_concat(DISTINCT  REPLACE(REPLACE(action,' (Critical)',''), ' damage','')) as typ, group_concat(DISTINCT  caster) as Caster  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster not like '" + fromuser + "' and target = '" + fromuser + "' and  dmg = 'True'  and amount > 0 group by skill  order by sum(amount) desc;" +
+                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0)  as Crit, group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and  heal = 'True'  and amount > 0 group by skill  order by sum(amount) desc;" +
+                      "select skill as Power, sum(amount) as SUM, count(*) as '#', sum(amount) /  count(*) as 'Ø', max(amount) as '»',IFNULL(SUM(CASE crit WHEN 'True' THEN 1 ELSE 0 END),0) as Crit, group_concat(DISTINCT  target) as Target  from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster not like '" + fromuser + "' and target = '" + fromuser + "' and  heal = 'True'  and amount > 0 group by skill order by sum(amount) desc;" +
                       "select sum(amount) || ' ' || action as Q from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and  dmg = 'True' and amount > 0 group by action order by sum(amount) desc;" +
                       "select sum(amount) || ' ' || action as Q from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster not like '" + fromuser + "' and target = '" + fromuser + "' and  dmg = 'True' and amount > 0 group by action order by sum(amount) desc;" +
-                      "select max(id),sum(amount), REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and amount > 0 and dmg = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc;" +
-                      "select max(id),sum(amount), REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and amount > 0 and heal = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc;" +
-                      "select max(id),sum(amount), REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':',''), heal from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and ((caster not like '" + fromuser + "' and dmg = 'True') or heal = 'True') and Target = '" + fromuser + "' and amount > 0 group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc;" +
+                      "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and amount > 0 and dmg = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
+                      "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and amount > 0 and heal = 'True' group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
+                      "select max(id),sum(amount) as '#', REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') as timing, heal from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and ((caster not like '" + fromuser + "' and dmg = 'True') or heal = 'True') and Target = '" + fromuser + "' and amount > 0 group by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') order by REPLACE(REPLACE(REPLACE(datetime,'.',''),' ',''),':','') asc " + limit + " ;" +
                       "select IFNULL(sum(amount),0) as TotalDMGout from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and dmg = 'True' and target not like '" + fromuser + "' and amount not like '0';" +
                       "select IFNULL(max(amount),0) as Maxhit from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and dmg = 'True' and target not like '" + fromuser + "' and amount not like '0';" +
                       "select IFNULL(sum(amount),0) as TotalHealout from stats where cID = '" + cID + "' and fromuser = '" + fromuser + "' and caster = '" + fromuser + "' and heal = 'True' and amount not like '0';" +
@@ -629,19 +730,13 @@ namespace Crowtails
                     28 HealCritIn 
                     29 group user
                     30 ememys battle
-
                     31 RAID
-                    32
-                    33
-                    34
-
-                    35
                      */
 
                     DataTable fightID1 = new DataTable();
-                    DataSet fDetail = new DataSet();
 
                     Stopwatch sw = new Stopwatch();
+                    fDetail = new DataSet();
                     try
                     {
                         da1.Fill(fDetail);
@@ -652,8 +747,41 @@ namespace Crowtails
                         return;
                     }
 
-                    DateTime start = DateTime.Now;
-                    DateTime stop = DateTime.Now;
+                    fDetail.Tables[0].TableName = "Detail_1_DMG";
+                    fDetail.Tables[1].TableName = "Detail_2_DMGin";
+                    fDetail.Tables[2].TableName = "Detail_3_Heal";
+                    fDetail.Tables[3].TableName = "Detail_4_Healin";
+                    fDetail.Tables[4].TableName = "DMG_type_out";
+                    fDetail.Tables[5].TableName = "DMG_type_in";
+                    fDetail.Tables[6].TableName = "DMG_out_Graph";
+                    fDetail.Tables[7].TableName = "Heal_out_Graph";
+                    fDetail.Tables[8].TableName = "Heal_in_DMG_in_Graph";
+                    fDetail.Tables[9].TableName = "TotalDMGout";
+                    fDetail.Tables[10].TableName = "Maxhit";
+                    fDetail.Tables[11].TableName = "TotalHealout";
+                    fDetail.Tables[12].TableName = "Maxheal";
+                    fDetail.Tables[13].TableName = "DMGHitCount";
+                    fDetail.Tables[14].TableName = "HealHitcount";
+                    fDetail.Tables[15].TableName = "TotalHealin";
+                    fDetail.Tables[16].TableName = "TotalDMGin";
+                    fDetail.Tables[17].TableName = "MostdangerEnemy";
+                    fDetail.Tables[18].TableName = "YourHealer";
+                    fDetail.Tables[19].TableName = "YourTarget";
+                    fDetail.Tables[20].TableName = "Dodges";
+                    fDetail.Tables[21].TableName = "Start";
+                    fDetail.Tables[22].TableName = "Stop";
+                    fDetail.Tables[23].TableName = "DMGCritOut";
+                    fDetail.Tables[24].TableName = "HealCritOut";
+                    fDetail.Tables[25].TableName = "dmghitinc";
+                    fDetail.Tables[26].TableName = "DMGCritIn";
+                    fDetail.Tables[27].TableName = "healhitinc";
+                    fDetail.Tables[28].TableName = "HealCritIn";
+                    fDetail.Tables[29].TableName = "group_user";
+                    fDetail.Tables[30].TableName = "ememys_battle";
+                    fDetail.Tables[31].TableName = "RAID";
+                                                   
+                    DateTime start = DateTime.UtcNow;
+                    DateTime stop = DateTime.UtcNow;
                     try
                     {
                         start = DateTime.Parse(fDetail.Tables[21].Rows[0][0].ToString());
@@ -687,7 +815,7 @@ namespace Crowtails
                         {
                             // (8/9)
                             var diffInSecondsrel = (DateTime.Parse(dr[8].ToString()) - DateTime.Parse(dr[9].ToString())).TotalSeconds - 1;
-                            dr[7] = (Convert.ToDouble(dr[6]) /  Convert.ToDouble(dr[16])).ToString("#"); //Math.Abs(diffInSecondsrel)).ToString("#");
+                            dr[7] = (Convert.ToDouble(dr[6]) /  Convert.ToDouble(dr[13])).ToString("#"); //Math.Abs(diffInSecondsrel)).ToString("#");
                             if (dr[7].Equals("")) { dr[7] = "0"; }
                         }
                         catch (Exception ex) { }
@@ -747,12 +875,13 @@ namespace Crowtails
                         {
                             if (dr.ItemArray.Length > 1)
                             {
-                                if (Convert.ToDouble(dr.ItemArray[5]) > 0 && Convert.ToDouble(dr.ItemArray[2]) > 0)
-                                    try
-                                    {
+                                try
+                                {
+                                    if (Convert.ToDouble(dr.ItemArray[5]) > 0 && Convert.ToDouble(dr.ItemArray[2]) > 0)
+                                   
                                         dr[5] = Convert.ToInt64((Convert.ToDouble(dr.ItemArray[5]) / (Convert.ToDouble(dr.ItemArray[2]) / Convert.ToDouble(100))).ToString("#"));
-                                    }
-                                    catch (Exception ex) { }
+                                }
+                                catch (Exception ex) { }
                             }
                         }
                         ii++;
@@ -771,9 +900,21 @@ namespace Crowtails
                     chart3.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
                     chart3.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
                     for (int abc = 0; abc < fightID1.Rows.Count;abc++) {
-                        DataRow s = fightID1.Rows[abc];
-                        chart3.Series[0].Points.AddXY(abc, Convert.ToDouble(abc), Convert.ToDouble(s[1]));
-                        chart3.Series[0].Points[abc].Label = s[0].ToString() + " (" + s[1].ToString() + ")";
+                        try
+                        {
+                            DataRow s = fightID1.Rows[abc];
+                            chart3.Series[0].Points.AddXY(abc, Convert.ToDouble(abc), Convert.ToDouble(s[1]));
+                            //chart3.Series[0].Points[abc].Label = s[0].ToString() + " (" + s[1].ToString() + ")";
+                        }
+                        catch (Exception ex) { }
+                        }
+
+                    int asc = chart3.Series[0].Points.Count-1;
+                    foreach (var p in chart3.Series[0].Points)
+                    {
+                        DataRow s = fightID1.Rows[asc];
+                        p.Label = s[0].ToString() + " (" + s[1].ToString() + ")";
+                        asc--;
                     }
 
                     lstInType.DisplayMember = "Q";
@@ -791,8 +932,12 @@ namespace Crowtails
                     foreach (DataRow s in fightID2.Rows)
                     {
                         i++;
-                        chart1.Series[0].Points.AddXY(Convert.ToDouble(s[2]), Convert.ToDouble(s[1]));
-                    }
+                        try
+                        {
+                            chart1.Series[0].Points.AddXY(Convert.ToDouble(s[0]), Convert.ToDouble(s[1]));
+                        }
+                        catch (Exception ex) { }
+                        }
 
                     chart4.Series[0].Points.Clear();
                     fightID2 = fDetail.Tables[7];
@@ -802,8 +947,12 @@ namespace Crowtails
 
                     foreach (DataRow s in fightID2.Rows)
                     {
-                        chart4.Series[0].Points.AddXY(Convert.ToDouble(s[2]), Convert.ToDouble(s[1]));
-                    }
+                        try
+                        {
+                            chart4.Series[0].Points.AddXY(Convert.ToDouble(s[0]), Convert.ToDouble(s[1]));
+                        }
+                        catch (Exception ex) { }
+                        }
 
                     chart2.Series[0].Points.Clear();
                     chart2.Series[1].Points.Clear();
@@ -815,15 +964,19 @@ namespace Crowtails
                     int ia = 0;
                     foreach (DataRow s in fightID2.Rows)
                     {
-                        if (Convert.ToBoolean(s[3]) == false)
+                        try
                         {
-                            chart2.Series[0].Points.AddXY(Convert.ToDouble(ia), Convert.ToDouble(s[1]));
+                            if (Convert.ToBoolean(s[3]) == false)
+                            {
+                                chart2.Series[0].Points.AddXY(Convert.ToDouble(ia), Convert.ToDouble(s[1]));
+                            }
+                            else
+                            {
+                                chart2.Series[1].Points.AddXY(Convert.ToDouble(ia), Convert.ToDouble(s[1]));
+                            }
+                            ia++;
                         }
-                        else
-                        {
-                            chart2.Series[1].Points.AddXY(Convert.ToDouble(ia), Convert.ToDouble(s[1]));
-                        }
-                        ia++;
+                        catch (Exception ex) { }
                     }
 
 
@@ -959,6 +1112,8 @@ namespace Crowtails
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             return System.Convert.ToBase64String(plainTextBytes);
         }
+
+        public static string usCulture = "en-US";
 
         private void btn_get_old_Click(object sender, EventArgs e)
         {
@@ -1380,7 +1535,7 @@ namespace Crowtails
             ShowDetailsNo = 0;
             toggleDetailsMenu();
             tme_live_view.Enabled = true;
-            lastAction = DateTime.Now;
+            lastAction = DateTime.UtcNow;
         }
 
         private void btnDPSin_Click(object sender, EventArgs e)
@@ -1390,7 +1545,7 @@ namespace Crowtails
             ShowDetailsNo = 1;
             toggleDetailsMenu();
             tme_live_view.Enabled = true;
-            lastAction = DateTime.Now;
+            lastAction = DateTime.UtcNow;
         }
 
         private void btnHPSout_Click(object sender, EventArgs e)
@@ -1400,7 +1555,7 @@ namespace Crowtails
             ShowDetailsNo = 2;
             toggleDetailsMenu();
             tme_live_view.Enabled = true;
-            lastAction = DateTime.Now;
+            lastAction = DateTime.UtcNow;
         }
 
         private void btnHPSin_Click(object sender, EventArgs e)
@@ -1410,7 +1565,7 @@ namespace Crowtails
             ShowDetailsNo = 3;
             toggleDetailsMenu();
             tme_live_view.Enabled = true;
-            lastAction = DateTime.Now;
+            lastAction = DateTime.UtcNow;
         }
 
         private void btnConditions_Click(object sender, EventArgs e)
@@ -1418,7 +1573,7 @@ namespace Crowtails
             lblDetails.Text = "Conditions (not implemented yet)";
             toggleDetailsMenu();
             tme_live_view.Enabled = true;
-            lastAction = DateTime.Now;
+            lastAction = DateTime.UtcNow;
         }
 
         private void btnJoinRaid_Click(object sender, EventArgs e)
@@ -1430,6 +1585,11 @@ namespace Crowtails
                     btnJoinRaid.Text = "leave";
                     thisOnlinePnl.Visible = false;
                     button6.Visible = true;
+
+                    Account_.Enabled = false;
+                    cbClass.Enabled = false;
+                    textBox2.Enabled = false;
+                    gameLang.Enabled = false;
                 }
                 else
                 {
@@ -1437,6 +1597,12 @@ namespace Crowtails
                     ApiKey_.Enabled = true;
                     thisOnlinePnl.Visible = true;
                     button6.Visible = false;
+
+
+                    Account_.Enabled = true;
+                    cbClass.Enabled = true;
+                    textBox2.Enabled = true;
+                    gameLang.Enabled = true;
                 }
             }
         }
@@ -1504,29 +1670,25 @@ namespace Crowtails
 
         private void bgwParseOld_DoWork(object sender, DoWorkEventArgs e)
         {
-            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + Application.StartupPath + "\\dps_release.db;Version=3;");
-            try
-            {
-                m_dbConnection.Open();
-            }
-            catch (Exception ex) { }
-
             string logfile = File.ReadAllText(e.Argument.ToString());
-            SQLiteCommand cmd = new SQLiteCommand(m_dbConnection);
+            /*SQLiteCommand cmd = new SQLiteCommand(m_dbConnection);
             cmd.CommandText = "BEGIN TRANSACTION;";
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();*/
             foreach (string s in logfile.Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries))
             {
+                parseLine(s, _myclass, _myaccount, _mygroup);
+                /*
                 try
                 {
-                    cmd.CommandText = parseLine(s, _myclass, _myaccount, _mygroup);
+                    cmd.CommandText = 
                     cmd.ExecuteNonQuery();
                 }
-                catch (Exception ex) { }
+                catch (Exception ex) { }*/
             }
+            /*
             cmd.CommandText = "END TRANSACTION;";
             cmd.ExecuteNonQuery();
-            m_dbConnection.Close();
+            m_dbConnection.Close();*/
         }
 
         private void bgwParseOld_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -1749,7 +1911,7 @@ namespace Crowtails
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            //panel1.Visible = false;
 
             if (Properties.Settings.Default.tut)
             {
@@ -1824,7 +1986,7 @@ namespace Crowtails
             try
             {
                 cID = dgFights.SelectedRows[0].Cells["col_cid"].Value.ToString();
-                lastAction = DateTime.Now;
+                lastAction = DateTime.UtcNow;
             }
             catch (Exception ex) { }
         }
@@ -2004,7 +2166,7 @@ namespace Crowtails
         {
             SaveFileDialog fd = new SaveFileDialog();
             fd.Filter = "|*.csv";
-            fd.FileName = DateTime.Now.ToFileTime().ToString() + ".csv";
+            fd.FileName = DateTime.UtcNow.ToFileTime().ToString() + ".csv";
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 string csv = "";
@@ -2099,7 +2261,7 @@ namespace Crowtails
 
             SaveFileDialog fd = new SaveFileDialog();
             fd.Filter = "|*.csv";
-            fd.FileName = DateTime.Now.ToFileTime().ToString() + ".csv";
+            fd.FileName = DateTime.UtcNow.ToFileTime().ToString() + ".csv";
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 string csv = "";
@@ -2139,7 +2301,7 @@ namespace Crowtails
                     {
                         foreach (Object o in p.Controls)
                         {
-                            if (o.GetType() == typeof(Panel))
+                            if (o.GetType() == typeof(Panel) && !((Control)o).Visible)
                             {
                                 if (((Panel)o).Tag != null && ((Panel)o).Tag.Equals("1"))
                                 {
@@ -2153,12 +2315,12 @@ namespace Crowtails
                     {
                         foreach (Object o in p.Controls)
                         {
-                            if (o.GetType() == typeof(Panel))
-                            {
-                                if (((Panel)o).Tag != null && ((Panel)o).Tag.Equals("1"))
+                                if (o.GetType() == typeof(Panel) && ((Control)o).Visible)
                                 {
-                                    ((Panel)o).Hide();
-                                }
+                                    if (((Panel)o).Tag != null && ((Panel)o).Tag.Equals("1"))
+                                    {
+                                        ((Panel)o).Hide();
+                                    }
                             }
 
                         }
@@ -2355,7 +2517,7 @@ namespace Crowtails
             try
             {
                 fromuser = lstInGroup.SelectedValue.ToString();
-                lastAction = DateTime.Now;
+                lastAction = DateTime.UtcNow;
             }
             catch (Exception ex) { }
         }
@@ -2458,7 +2620,7 @@ namespace Crowtails
                         m_dbConnection_live.Close();
                         sqlQueue.RemoveAt(0);
 
-                        lastAction = DateTime.Now;
+                        lastAction = DateTime.UtcNow;
                     }
                     catch (Exception ex)
                     {
@@ -2511,125 +2673,137 @@ namespace Crowtails
 
         private void bgPost_DoWorkAsync(object sender, DoWorkEventArgs e)
         {
-            var content = new StringContent("{ \"d\":\"" + e.Argument + "\", \"t\":{\".sv\":\"timestamp\"}}", Encoding.UTF8, "application/json");
-            CliOn.DefaultRequestHeaders.Clear();
-            CliOn.DefaultRequestHeaders.ConnectionClose = false;
-            var response = CliOn.PostAsync("https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json", content).GetAwaiter().GetResult();
+            try
+            {
+                var content = new StringContent("{ \"d\":\"" + e.Argument + "\", \"t\":{\".sv\":\"timestamp\"}}", Encoding.UTF8, "application/json");
+                CliOn.DefaultRequestHeaders.Clear();
+                CliOn.DefaultRequestHeaders.ConnectionClose = false;
+                var response = CliOn.PostAsync("https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json", content).GetAwaiter().GetResult();
+            }
+            catch (Exception ex) { }
         }
 
         private void bgGet_DoWork(object sender, DoWorkEventArgs e)
         {
-            string URL = "";
-            if (lastLastInsertUnix == "" || ab == "0")
+            try
             {
-                URL = "https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json?limitToLast=1&orderBy=\"t\"";
-                firstnetwork = true;
-            }
-            else {
-                firstnetwork = false;
-                
-                try
+                string URL = "";
+                if (lastLastInsertUnix == "" || ab == "0")
                 {
-                    if (ab == (Convert.ToInt64(lastLastInsertUnix) - 2).ToString())
-                    {
-                        ab = (Convert.ToInt64(lastLastInsertUnix) - 1).ToString();
-                    }
-                    if (ab == (Convert.ToInt64(lastLastInsertUnix) - 1).ToString())
-                    {
-                        ab = (Convert.ToInt64(lastLastInsertUnix)).ToString();
-                    }
-                    else if (ab == lastLastInsertUnix)
-                    {
-                     //   ab = (Convert.ToInt64(lastLastInsertUnix) + 1).ToString();
-                    }
-                    else if (ab == (Convert.ToInt64(lastLastInsertUnix) + 1).ToString())
-                    {
-
-                    }
-                    else
-                    {
-                        ab = (Convert.ToInt64(lastLastInsertUnix) - 2).ToString();
-                    }
+                    URL = "https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json?limitToLast=1&orderBy=\"t\"";
+                    firstnetwork = true;
                 }
-                catch (Exception ex)
+                else
                 {
-                }
-                URL = "https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json?orderBy=\"t\"&startAt=" + ab; // " + (Convert.ToDouble(lastAction.ToString("yyyyMMddHHmmss")) - 20).ToString("#") +  "
+                    firstnetwork = false;
 
-            }
-
-            string responseBody = "";
-            CliOn.DefaultRequestHeaders.Clear();
-            CliOn.DefaultRequestHeaders.ConnectionClose = false;
-            var response = CliOn.GetAsync(URL).GetAwaiter().GetResult();
-            if (response.IsSuccessStatusCode)
-            {
-                var responseContent = response.Content;
-                responseBody = responseContent.ReadAsStringAsync().GetAwaiter().GetResult();
-
-            }
-            
-            var firebaseLookup = JsonConvert.DeserializeObject<Dictionary<string, netline>>(responseBody);
-            var array = firebaseLookup.Values.ToList(); // or FirstOrDefault();
-
-            if (array != null)
-            {
-                foreach (var content in array)
-                {
-                    if (NetQue.Count > 20) {
-                        NetQue.RemoveAt(0);
-                    }
-                    if (NetQue.IndexOf(content.d.ToString()) == -1)
+                    try
                     {
-                        try
+                        if (ab == (Convert.ToInt64(lastLastInsertUnix) - 2).ToString())
                         {
-                            NetQue.Add(content.d.ToString());
+                            ab = (Convert.ToInt64(lastLastInsertUnix) - 1).ToString();
+                        }
+                        if (ab == (Convert.ToInt64(lastLastInsertUnix) - 1).ToString())
+                        {
+                            ab = (Convert.ToInt64(lastLastInsertUnix)).ToString();
+                        }
+                        else if (ab == lastLastInsertUnix)
+                        {
+                            //   ab = (Convert.ToInt64(lastLastInsertUnix) + 1).ToString();
+                        }
+                        else if (ab == (Convert.ToInt64(lastLastInsertUnix) + 1).ToString())
+                        {
 
-                            string[] lines = content.d.ToString().Split('|');
-                            foreach (string s in lines)
+                        }
+                        else
+                        {
+                            ab = (Convert.ToInt64(lastLastInsertUnix) - 2).ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                    URL = "https://" + Properties.Settings.Default.ServerUrl + ".firebaseio.com/.json?orderBy=\"t\"&startAt=" + ab; // " + (Convert.ToDouble(lastAction.ToString("yyyyMMddHHmmss")) - 20).ToString("#") +  "
+
+                }
+
+                string responseBody = "";
+                CliOn.DefaultRequestHeaders.Clear();
+                CliOn.DefaultRequestHeaders.ConnectionClose = false;
+                var response = CliOn.GetAsync(URL).GetAwaiter().GetResult();
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = response.Content;
+                    responseBody = responseContent.ReadAsStringAsync().GetAwaiter().GetResult();
+                }
+
+                var firebaseLookup = JsonConvert.DeserializeObject<Dictionary<string, netline>>(responseBody);
+                if (firebaseLookup == null) {
+                    return;
+                }
+                var array = firebaseLookup.Values.ToList(); // or FirstOrDefault();
+
+                if (array != null)
+                {
+                    foreach (var content in array)
+                    {
+                        if (NetQue.Count > 20)
+                        {
+                            NetQue.RemoveAt(0);
+                        }
+                        if (NetQue.IndexOf(content.d.ToString()) == -1)
+                        {
+                            try
                             {
+                                NetQue.Add(content.d.ToString());
 
-                                if (s.Length > 10)
+                                string[] lines = content.d.ToString().Split('|');
+                                foreach (string s in lines)
                                 {
-                                    string values = s;
-                                    string sqlval = "";
-                                    int i = 0;
-                                    foreach (string sca in values.Split(';'))
+
+                                    if (s.Length > 10)
                                     {
-                                        i++;
-                                        string add = "";
-                                        if (sca.Equals("A") && i > 2)
+                                        string values = s;
+                                        string sqlval = "";
+                                        int i = 0;
+                                        foreach (string sca in values.Split(';'))
                                         {
-                                            add = "True";
+                                            i++;
+                                            string add = "";
+                                            if (sca.Equals("A") && i > 2)
+                                            {
+                                                add = "True";
+                                            }
+                                            else if (sca.Equals("B") && i > 2)
+                                            {
+                                                add = "False";
+                                            }
+                                            else if (sca.Contains(':'))
+                                            {
+                                                add = UnixTimeToDateTime(Convert.ToInt64(content.t)).ToString("dd.MM.yyyy HH:mm:ss");
+                                                lastLastInsertUnix = content.t;
+                                            }
+                                            else
+                                            {
+                                                add = sca;
+                                            }
+                                            sqlval += "'" + add + "',";
                                         }
-                                        else if (sca.Equals("B") && i > 2)
-                                        {
-                                            add = "False";
-                                        }
-                                        else if (sca.Contains(':'))
-                                        {
-                                            add = UnixTimeToDateTime(Convert.ToInt64(content.t)).ToString("dd.MM.yyyy HH:mm:ss");
-                                            lastLastInsertUnix = content.t;
-                                        }
-                                        else
-                                        {
-                                            add = sca;
-                                        }
-                                        sqlval += "'" + add + "',";
+
+                                        values = sqlval.Substring(0, sqlval.Length - 1);
+                                        string sql = "insert into stats (fromuser ,charclass ,caster, skill, cID, dateTime, self, dmg, heal, restore, crit, target, action, amount)values(" + values + ")";
+
+                                        sqlQueue.Add(sql);
                                     }
-
-                                    values = sqlval.Substring(0, sqlval.Length - 1);
-                                    string sql = "insert into stats (fromuser ,charclass ,caster, skill, cID, dateTime, self, dmg, heal, restore, crit, target, action, amount)values(" + values + ")";
-
-                                    sqlQueue.Add(sql);
                                 }
                             }
+                            catch (Exception ex) { }
                         }
-                        catch (Exception ex) { }
-                    }
 
+                    }
                 }
             }
+            catch (Exception ex) { }
         }
 
         private void bgPost_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -2642,6 +2816,49 @@ namespace Crowtails
         private void bgGet_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             cID = e.UserState.ToString();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            string firstname = fDetail.Tables[29].Rows[0].ItemArray[0].ToString();
+            string jsons = "";
+            foreach (DataRow dr in fDetail.Tables[29].Rows) {
+                string pre = "<script type=\"application/json\" id=\"" + dr.ItemArray[0].ToString() + "\">";
+                string mainj = JsonConvert.SerializeObject(getDetails(dr.ItemArray[0].ToString()), Formatting.Indented); 
+                string sub = "</script>";
+                jsons += pre + mainj + sub;
+            }
+            var template = File.ReadAllText(Application.StartupPath + "\\fight" + ".html");
+            File.WriteAllText(Application.StartupPath + "\\fight_" + cID + ".html", template.Replace("@@JSON@@", jsons).Replace("@@firstname@@", firstname) );
+            
+            Process p = new Process();
+            p.StartInfo.FileName = Application.StartupPath + "\\fight_" + cID + ".html";
+            p.Start();
+        }
+        
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            CombatSimRows++;
+            lastAction = DateTime.UtcNow;
+        }
+
+        private void btnSimFight_Click(object sender, EventArgs e)
+        {
+            timer3.Enabled = !timer3.Enabled;
+            if (CombatSimRows > 0) {
+                CombatSimRows = 0;
+            }
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            button14.Visible = false;
+            timer5.Enabled = false;
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            SettingsWindow.Visible = false;
         }
     }
 
